@@ -1,0 +1,267 @@
+body {
+    color: #444444;
+}
+
+
+
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.tit {
+    line-height: 1;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.sec {
+    padding: 100px 0;
+}
+
+.header {
+    line-height: 100px;
+}
+
+.header h1 {
+    font-size: 0;
+    margin: 0 100px 0 0;
+}
+
+.header .gnb {
+    margin: 0 auto 0 0;
+}
+
+.header .gnb>ul {
+    display: flex;
+    gap: 60px;
+}
+
+.header .gnb>ul>li {
+    position: relative;
+}
+
+.header .gnb>ul>li~li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    width: 1px;
+    height: 12px;
+    background: #ddd;
+    transform: translate(0, -50%);
+}
+
+.header .gnb>ul>li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0;
+    height: 3px;
+    background: #d70c25;
+
+}
+
+.header .gnb>ul>li:hover::after {
+    width: 100%;
+    transition: 0.3s;
+
+}
+
+.header .inner {
+    justify-content: space-between;
+}
+
+.header .right {
+    font-size: 25px;
+}
+
+.mainVisual {
+    position: relative;
+    height: 500px;
+
+    background: url(../img/main.jpg) no-repeat center center/cover;
+}
+
+.mainVisual::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.3) 30%, transparent) 70%;
+}
+
+.mainVisual .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+}
+
+.mainVisual .inner h2 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 30px 0;
+    text-indent: -4px;
+}
+
+.mainVisual .inner p {
+    font-size: 15px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 25px;
+}
+
+.module {
+    padding: 100px 0;
+}
+
+.module h2 {
+    text-align: center;
+    margin: 0 0 20px 0;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.module p {
+    text-align: center;
+    margin: 0 0 40px 0;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.module .inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.models {
+    padding: 100px 0;
+    background: #f9f9f9;
+}
+
+.models h2 {
+    text-align: center;
+    margin: 0 0 20px 0;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.models p {
+    text-align: center;
+    margin: 0 0 40px 0;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.models .inner {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 1230px;
+}
+
+.models .inner img {
+    width: 100%;
+    padding: 15px;
+}
+
+.models .inner .con:nth-child(3) {
+    /* 1번 라인에서 2칸 */
+    grid-column: 2 / span 3;
+    /* 1번 라인에서 3칸 */
+    grid-row: 1 / span 3;
+}
+
+.bg {
+    position: relative;
+    /* margin: 0 0 300px 0; */
+    height: 600px;
+    background: url(../img/BUGATTI_06.webp) no-repeat fixed center center/cover;
+}
+
+.bg::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 30%, transparent) 70%;
+}
+
+.bg .tit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    z-index: 999;
+}
+
+.bg .tit h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+.bg .tit p {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.footer {
+    position: relative;
+    padding: 100px 0;
+    background: #000;
+}
+
+.footer .list {
+    font-size: 0;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.footer .list li {
+    margin: 0 10px;
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+}
+
+.footer .list01 {
+    font-size: 0;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.footer .list01 li {
+    margin: 0 20px;
+    display: inline-block;
+    font-size: 6px;
+    color: #fff;
+}
+
+.footer .list02 {
+    font-size: 0;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.footer .list02 li {
+    margin: 0 20px;
+    display: inline-block;
+    font-size: 8px;
+    color: #fff;
+}
